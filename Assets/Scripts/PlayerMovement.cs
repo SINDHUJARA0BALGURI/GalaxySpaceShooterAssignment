@@ -5,8 +5,7 @@ using UnityEngine.UI;
 public class PlayerMovement : MonoBehaviour
 {
     int score;
-    public Text scoreDisplay;
-    public Text levelDisplay;
+
     public float PlayerSpeed;
     public Player localPlayer;
     Rigidbody rb;
@@ -16,18 +15,10 @@ public class PlayerMovement : MonoBehaviour
     {
 
         rb = GetComponent<Rigidbody>();
-        levelDisplay.text = "Level-1";
+
     }
 
-    private void Update()
-    {
-        if (score == 10000)
-        {
-            levelDisplay.text = "Level-2";
-        }
-        score++;
-        scoreDisplay.text = "Score :" + score;
-    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
